@@ -93,7 +93,7 @@ ul.pagination {
 
 .book-brand {
   margin-top: 0;
-  font-weight: 500;
+  font-weight: 700;
 }
 
 .book-menu {
@@ -214,6 +214,7 @@ ul.pagination {
   display: flex;
   padding-top: $padding-16;
   font-size: $font-size-14;
+  display: none; // For buggy time displayed on the home page
 
   img {
     height: 1em;
