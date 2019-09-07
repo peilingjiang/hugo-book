@@ -94,6 +94,13 @@ ul.pagination {
 .book-brand {
   margin-top: 0;
   font-weight: 700;
+
+  img {
+    height: 1.5em;
+    width: auto;
+    vertical-align: middle;
+    margin-right: $padding-8;
+  }
 }
 
 .book-menu {
