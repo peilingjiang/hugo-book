@@ -20,6 +20,7 @@
 
 - Clean simple design
 - Light and Mobile-Friendly
+- Multi-language support
 - Customisable
 - Designed to not interfere with other layouts
 - Zero initial configuration
@@ -160,15 +161,13 @@ disableKinds = ['taxonomy', 'taxonomyTerm']
   # - In blog posts
   BookDateFormat = 'Jan 2, 2006'
   
-  # (Optional, default true) Enables search function with lunr.js,
+  # (Optional, default true) Enables search function with flexsearch,
   # Index is built on fly, therefore it might slowdown your website.
   BookSearch = true
-
-  # (Optional, default none) Search config for flexsearch index.
-  # Read documentation at https://github.com/nextapps-de/flexsearch#usage. By default 'balance' preset is used.
-  # This option allows to set specific configs for languages support. Must be valid JavaScript object.
-  BookSearchConfig = '{ cache: true }'
 ```
+
+### Multi-Language Support
+Theme supports Hugo's [multilingual mode](https://gohugo.io/content-management/multilingual/), just follow configuration guide there. You can also tweak search indexing configuration per language in `i18n` folder.
 
 ### Page Configuration
 
@@ -244,7 +243,6 @@ Buttons are styled links to internal of external pages
 {{< button relref="/" >}}Get Home{{< /button >}}
 {{< button href="https://github.com/alex-shpak/hugo-book" >}}Contribute{{< /button >}}
 ```
-
 
 ### Tabs
 
