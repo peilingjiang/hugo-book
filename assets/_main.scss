@@ -94,6 +94,10 @@ ul.pagination {
   margin: 0 auto;
 }
 
+.book-icon {
+  filter: $icon-filter;
+}
+
 .book-brand {
   margin-top: 0;
   font-weight: 700;
@@ -147,6 +151,10 @@ ul.pagination {
   min-width: $body-min-width;
   flex-grow: 1;
   padding: $padding-16;
+}
+
+.book-post {
+  margin-bottom: $padding-16 * 2;
 }
 
 .book-header {
@@ -276,17 +284,6 @@ ul.pagination {
   }
 }
 
-.book-posts {
-  min-width: $body-min-width;
-  max-width: $body-min-width * 2;
-  flex-grow: 1;
-  padding: $padding-16;
-
-  article {
-    padding-bottom: $padding-16;
-  }
-}
-
 .book-home {
   padding: $padding-16;
 }
@@ -294,7 +291,6 @@ ul.pagination {
 // Responsive styles
 aside nav,
 .book-page,
-.book-posts,
 .markdown {
   transition: 0.2s ease-in-out;
   transition-property: transform, margin-left, opacity;
@@ -319,8 +315,7 @@ aside nav,
 
   #menu-control:checked + main {
     .book-menu nav,
-    .book-page,
-    .book-posts {
+    .book-page {
       transform: translateX($menu-width);
     }
 
@@ -337,7 +332,6 @@ aside nav,
 // Extra space for big screens
 @media screen and (min-width: $container-max-width) {
   .book-page,
-  .book-posts,
   .book-menu nav,
   .book-toc nav {
     padding: $padding-16 * 2 $padding-16;
