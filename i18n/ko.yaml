@@ -1,14 +1,14 @@
 - id: Search
-  translation: 搜索
+  translation: Search
 
 - id: Edit this page
-  translation: 编辑本页
+  translation: Edit this page
 
 - id: Last modified by
-  translation: 最后修改者
+  translation: Last modified by
 
 - id: Expand
-  translation: 展开
+  translation: Expand
 
 - id: bookSearchConfig
   translation: |

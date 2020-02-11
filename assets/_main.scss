@@ -154,12 +154,16 @@ ul.pagination {
 }
 
 .book-post {
-  margin-bottom: $padding-16 * 2;
+  margin-bottom: $padding-16 * 3;
 }
 
 .book-header {
-  margin-bottom: $padding-16;
   display: none;
+  margin-bottom: $padding-16;
+
+  label {
+    line-height: 0;
+  }
 }
 
 .book-search {
@@ -178,7 +182,7 @@ ul.pagination {
     padding: $padding-8;
 
     border: 0;
-    border-radius: $padding-4;
+    border-radius: $border-radius;
 
     background: $gray-100;
     color: $body-font-color;
@@ -226,7 +230,6 @@ ul.pagination {
 }
 
 .book-footer {
-  display: none;
   padding-top: $padding-16;
   font-size: $font-size-14;
 
@@ -236,6 +239,9 @@ ul.pagination {
   }
 }
 
+.book-comments {
+  margin-top: $padding-16;
+}
 
 .book-languages {
   position: relative;
@@ -244,43 +250,49 @@ ul.pagination {
   padding: $padding-16;
   margin: -$padding-16;
 
-  &:hover .book-languages-list {
-    display: block;
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+    li {
+      white-space: nowrap;
+      cursor: pointer;
+    }
+  }
+
+  &:hover,
+  &:focus,
+  &:focus-within {
+    .book-languages-list {
+      display: block;
+    }
   }
 
   .book-languages-list {
     display: none;
 
     position: absolute;
-    bottom: 0;
+    bottom: 100%;
     left: 0;
     padding: $padding-8 0;
 
     background: $body-background;
     box-shadow: 0 0 $padding-4 rgba(0, 0, 0, 0.1);
 
-    li {
-      padding: $padding-8 $padding-16;
-      white-space: nowrap;
+    li img {
+      opacity: 0.25;
     }
 
-    img {
-      opacity: .1;
-    }
-
-    li.active img {
+    li.active img,
+    li:hover img {
       opacity: 1;
     }
 
     a {
       color: inherit;
+      padding: $padding-8 $padding-16;
     }
-  }
-
-  ul {
-    margin: 0;
-    padding: 0;
-    list-style: none;
   }
 }
 
@@ -291,26 +303,25 @@ ul.pagination {
 // Responsive styles
 aside nav,
 .book-page,
+.book-header aside,
 .markdown {
   transition: 0.2s ease-in-out;
-  transition-property: transform, margin-left, opacity;
-  will-change: transform, margin-left;
+  transition-property: transform, margin, opacity;
+  will-change: transform, margin;
 }
 
-@media screen and (max-width: $md-breakpoint) {
-  .book-toc {
-    display: none;
-  }
-}
-
-@media screen and (max-width: $sm-breakpoint) {
+@media screen and (max-width: $mobile-breakpoint) {
   .book-menu {
     margin-left: -$menu-width;
     font-size: $font-size-base;
   }
 
+  .book-toc {
+    display: none;
+  }
+
   .book-header {
-    display: flex;
+    display: block;
   }
 
   #menu-control:checked + main {
@@ -319,13 +330,14 @@ aside nav,
       transform: translateX($menu-width);
     }
 
-    .book-header label {
-      transform: rotate(90deg);
-    }
-
+    .book-header aside,
     .markdown {
       opacity: 0.25;
     }
+  }
+
+  #toc-control:checked + aside {
+    display: block;
   }
 }
 
