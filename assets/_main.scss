@@ -2,6 +2,7 @@ html {
   font-size: $font-size-base;
   letter-spacing: 0.33px;
   scroll-behavior: smooth;
+  touch-action: manipulation;
 }
 
 html,
@@ -54,6 +55,7 @@ aside nav ul {
 
   li {
     margin: 1em 0;
+    position: relative;
   }
 
   a {
@@ -67,16 +69,6 @@ aside nav ul {
   ul {
     padding-left: $padding-16;
   }
-}
-
-// Classes to hide nested levels of ToC/Menu
-.levels-1 ul ul,
-.levels-2 ul ul ul,
-.levels-3 ul ul ul ul,
-.levels-4 ul ul ul ul ul,
-.levels-5 ul ul ul ul ul ul,
-.levels-6 ul ul ul ul ul ul ul {
-  display: none;
 }
 
 ul.pagination {
@@ -123,10 +115,17 @@ ul.pagination {
 
   a {
     color: inherit;
+    word-wrap: break-word;
   }
 
   a.active {
     color: $color-link;
+  }
+
+  a.collapsed::after {
+    content: "▸";
+    position: absolute;
+    right: 0;
   }
 }
 
@@ -333,6 +332,15 @@ aside nav,
     .book-header aside,
     .markdown {
       opacity: 0.25;
+    }
+
+    .book-menu-overlay {
+      display: block;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
     }
   }
 
