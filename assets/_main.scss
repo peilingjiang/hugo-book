@@ -86,7 +86,6 @@ ul.pagination {
 
 .book-brand {
   margin-top: 0;
-  font-weight: 700;
 
   img {
     height: 1.5em;
@@ -98,7 +97,7 @@ ul.pagination {
 
 .book-menu {
   flex: 0 0 $menu-width;
-  font-size: $font-size-12;
+  font-size: $font-size-14;
 
   nav {
     width: $menu-width;
