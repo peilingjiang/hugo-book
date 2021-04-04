@@ -234,15 +234,17 @@ bookSearchExclude = true
 
 There are few empty partials you can override in `layouts/partials/`
 
-| Partial                                            | Placement                              |
-| -------------------------------------------------- | -------------------------------------- |
-| `layouts/partials/docs/inject/head.html`           | Before closing `<head>` tag            |
-| `layouts/partials/docs/inject/body.html`           | Before closing `<body>` tag            |
-| `layouts/partials/docs/inject/footer.html`         | After page footer content              |
-| `layouts/partials/docs/inject/menu-before.html`    | At the beginning of `<nav>` menu block |
-| `layouts/partials/docs/inject/menu-after.html`     | At the end of `<nav>` menu block       |
-| `layouts/partials/docs/inject/content-before.html` | Before page content                    |
-| `layouts/partials/docs/inject/content-after.html`  | After page content                     |
+| Partial                                            | Placement                                   |
+| -------------------------------------------------- | ------------------------------------------- |
+| `layouts/partials/docs/inject/head.html`           | Before closing `<head>` tag                 |
+| `layouts/partials/docs/inject/body.html`           | Before closing `<body>` tag                 |
+| `layouts/partials/docs/inject/footer.html`         | After page footer content                   |
+| `layouts/partials/docs/inject/menu-before.html`    | At the beginning of `<nav>` menu block      |
+| `layouts/partials/docs/inject/menu-after.html`     | At the end of `<nav>` menu block            |
+| `layouts/partials/docs/inject/content-before.html` | Before page content                         |
+| `layouts/partials/docs/inject/content-after.html`  | After page content                          |
+| `layouts/partials/docs/inject/toc-before.html`     | At the beginning of table of contents block |
+| `layouts/partials/docs/inject/toc-after.html`      | At the end of table of contents block       |
 
 ### Extra Customisation
 
